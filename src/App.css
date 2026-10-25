@@ -1,0 +1,909 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "Poppins", sans-serif;
+  color: #262626;
+  background: #fffdf9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  font-smooth: always;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.navbar {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 25px;
+  font-weight: 800;
+  color: #282828;
+}
+
+.logo svg,
+.logo span {
+  color: #f47721;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  color: #666;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: #f47721;
+}
+
+.cart-button,
+.primary-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  background: #f47721;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 19px;
+  font-weight: 600;
+}
+
+.hero {
+  max-width: 1200px;
+  margin: 20px auto 70px;
+  padding: 40px 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.eyebrow {
+  color: #f47721;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 5vw, 66px);
+  line-height: 1.15;
+  letter-spacing: -2px;
+  margin: 20px 0;
+}
+
+.hero h1 span {
+  color: #f47721;
+}
+
+.hero-content > p {
+  color: #777;
+  max-width: 430px;
+  line-height: 1.9;
+  margin-bottom: 28px;
+}
+
+.hero-features {
+  display: flex;
+  gap: 24px;
+  margin-top: 30px;
+  color: #666;
+  font-size: 13px;
+}
+
+.hero-features span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.hero-features svg {
+  color: #f47721;
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image > img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 28px;
+}
+
+.floating-card {
+  position: absolute;
+  bottom: 20px;
+  left: -22px;
+  background: white;
+  border-radius: 14px;
+  padding: 15px;
+  box-shadow: 0 8px 35px #00000014;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.floating-card > span {
+  font-size: 28px;
+}
+
+.floating-card strong,
+.floating-card small {
+  display: block;
+}
+
+.floating-card small {
+  color: #888;
+  margin-top: 4px;
+}
+
+.menu-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 25px 28px 80px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.section-heading h2 {
+  font-size: 32px;
+  margin: 8px 0;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 12px 15px;
+  width: 280px;
+  color: #888;
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  min-width: 0;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.food-card {
+  background: white;
+  border: 1px solid #f0ece7;
+  border-radius: 18px;
+  overflow: hidden;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px #0000000c;
+}
+
+.food-card > img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.food-info {
+  padding: 16px;
+}
+
+.food-title,
+.food-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.food-title h3 {
+  font-size: 15px;
+  margin: 0;
+}
+
+.food-title span {
+  color: #ed9b20;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 12px;
+}
+
+.food-info > p {
+  font-size: 13px;
+  color: #999;
+  margin: 9px 0 18px;
+}
+
+.food-bottom strong {
+  color: #f47721;
+  font-size: 15px;
+}
+
+.add-button {
+  background: #fff1e5;
+  color: #e96813;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.empty-message {
+  text-align: center;
+  color: #888;
+  padding: 35px;
+}
+
+.chat-button {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 58px;
+  height: 58px;
+  border: none;
+  border-radius: 50%;
+  background: #f47721;
+  color: white;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 5px 20px #f4772155;
+  z-index: 10;
+}
+
+
+
+
+@media (max-width: 850px) {
+  .hero {
+    gap: 30px;
+  }
+
+  .food-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 8px;
+   
+  }
+
+  .navbar .logo {
+    gap: 3px;
+    font-size: 15px;
+  }
+
+  .navbar .logo svg {
+    width: 15px;
+    height: 20px;
+  }
+
+  .navbar .nav-links {
+    gap: 6px;
+    flex: 0 1 auto;
+  }
+
+  .navbar .nav-links a {
+    font-size: 11px;
+  }
+
+  .navbar .cart-button {
+    margin-left: 0;
+    padding: 4px 5px;
+    gap: 4px;
+    font-size: 7px;
+    
+  }
+}
+
+.category-list {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.category-button {
+  border: 1px solid #eee;
+  background: white;
+  color: #555;
+  border-radius: 10px;
+  padding: 10px 17px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.category-button:hover,
+.category-button.active {
+  background: #f47721;
+  border-color: #f47721;
+  color: white;
+}
+
+
+@media (max-width: 600px) {
+  .category-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+    margin-bottom: 22px;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .category-button {
+    flex: 0 0 auto;
+    padding: 8px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+}
+
+
+.chat-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ff6b35;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  border-radius: 50%;
+  color: white;
+  place-items: center;
+
+}
+
+
+.chat-window {
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+  width: 320px;
+  max-width: calc(100vw - 40px);
+  height: 400px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #333;
+}
+
+.chat-header {
+  background: #ff6b35;
+  color: white;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-header h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.chat-header button {
+  background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.chat-input {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+
+.chat-input input {
+  min-width: 0;
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.chat-input button {
+  background: #ff6b35;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+/* Foodie AI Chat Improvements */
+
+.chat-messages {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fffaf6;
+  scroll-behavior: smooth;
+}
+
+.chat-messages p {
+  max-width: 85%;
+  padding: 11px 14px;
+  margin: 0;
+  border-radius: 15px;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.chat-messages .user-message {
+  align-self: flex-end;
+  background: #ff6b35;
+  color: white;
+  border-bottom-right-radius: 4px;
+  border-radius: 16px 16px 4px 16px;
+  padding: 10px 14px;
+  max-width: 85%;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+
+.chat-messages .assistant-message {
+  align-self: flex-start;
+  background: #ffffff;
+  color: #333333;
+  border: 1px solid #f0e5dc;
+  border-bottom-left-radius: 4px;
+  border-radius: 16px 16px 16px 4px;
+  padding: 10px 14px;
+  max-width: 85%;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background: white;
+  border-top: 1px solid #f0e5dc;
+}
+
+.chat-input input {
+  flex: 1;
+  min-width: 0;
+  padding: 11px;
+  border: 1px solid #e5ddd7;
+  border-radius: 10px;
+  outline: none;
+}
+
+.chat-input input:focus {
+  border-color: #ff6b35;
+}
+
+.chat-input button {
+  background: #ff6b35;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 11px 14px;
+  cursor: pointer;
+}
+
+.chat-input button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.chat-header {
+  flex-shrink: 0;
+}
+
+.chat-messages {
+  min-height: 0;
+}
+
+.cart-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 12px;
+  right: 12px;
+  width: auto;
+  max-width: none;
+  max-height: 70vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  background: white;
+  color: #333;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+}
+
+.cart-dropdown h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.cart-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 10px;
+}
+
+.cart-item button {
+  margin-left: 0;
+  flex-shrink: 0;
+}
+
+.cart-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-controls button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.cart-item button {
+  cursor: pointer;
+}
+.typing-indicator {
+  opacity: 0.7;
+  font-style: italic;
+  animation: typingPulse 1s infinite alternate;
+}
+
+@keyframes typingPulse {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* Desktop cart dropdown */
+@media (min-width: 601px) {
+  .navbar .cart-dropdown {
+    left: auto;
+    right: 0;
+    width: 360px;
+    max-width: calc(100vw - 32px);
+  }
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 420px;
+  margin: 20px auto;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #f0e5dc;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+.checkout-form h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.checkout-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.checkout-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.checkout-form p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.checkout-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #f47721;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.checkout-form button[type="button"] {
+  background: #eee;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .checkout-form {
+    max-width: 100%;
+    padding: 18px;
+    margin: 16px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin: 10px auto 40px;
+    padding: 24px 20px;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 9vw, 46px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin: 16px 0;
+  }
+
+  .hero-content > p {
+    max-width: 100%;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .hero-features {
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 22px;
+  }
+
+  .hero-image > img {
+    height: 280px;
+    border-radius: 20px;
+    width: 100%;
+  }
+  .floating-card {
+  left: -25px;
+  border-radius: 14px;
+  padding: 7px;
+  
+  
+  }
+
+}
+
+
+@media (max-width: 600px) {
+  .section-heading {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .section-heading h2 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .search-box {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .food-grid {
+    display: grid;
+    grid-template-columns: 2fr;
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .food-card {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .food-card > img {
+    display: block;
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+  }
+
+  .food-info {
+    padding: 9px;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .food-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 5px;
+  }
+
+  .food-title h3 {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .food-title span {
+    font-size: 11px;
+  }
+
+  .food-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .food-bottom strong {
+    font-size: 13px;
+  }
+
+  .food-bottom button {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+
+footer {
+  background: #292521;
+  color: #ddd;
+  text-align: center;
+  padding: 25px;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  footer {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 14px;
+    font-size: 10px;
+    line-height: 1.7;
+    text-align: center;
+   
+  }
+}
