@@ -1,5 +1,5 @@
 export async function sendChatMessage(message, meals = []) {
-  const response = await fetch("http://localhost:3001/api/chat", {
+ const response = await fetch("https://foodie-31sn.vercel.app/api/chat", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
